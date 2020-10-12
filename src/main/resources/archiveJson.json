@@ -1,0 +1,109 @@
+{
+    "FolderSettingXML": {
+        "Authorizers": [
+            {
+                "ID": "16356040",
+                "Name": "张杭",
+                "ObjectType": "用户",
+                "Power": "read"
+            },
+            {
+                "ID": "lly_72110",
+                "Name": "联络员_哲学系（珠海）",
+                "ObjectType": "角色",
+                "Power": "read"
+            },
+            {
+                "ID": "lly_03100",
+                "Name": "联络员_教务部",
+                "ObjectType": "角色",
+                "Power": "read"
+            }
+        ],
+        "DateTime": "2020-09-08 09:12:57",
+        "FilesList": [
+            {
+                "FileLoc": "1303139228757008385.zip",
+                "Format": "ZIP",
+                "ParentFileUUID": "",
+                "Title": "1303139228757008385",
+                "Type": "单文件",
+                "UUID": "1303139228757008385"
+            }
+        ],
+        "FolderType": "",
+        "PackageUUID": "1303139228757008385"
+    },
+    "Main": [
+        {
+            "Author": "业务系统生成",
+            "FileLoc": "/files/1303139228757008384.pdf",
+            "Format": "pdf",
+            "ID": "0",
+            "Title": "中山大学哲学系（珠海）哲学（珠海）专业2016级本科生成绩单[张杭]"
+        }
+    ],
+    "Meta": {
+        "ENTITY_AGENTENTITY": [
+            {}
+        ],
+        "ENTITY_APPROVEENTITY": [
+            {}
+        ],
+        "ENTITY_BUSINESSENTITY": [
+            {}
+        ],
+        "ENTITY_FILEENTITY": [
+            {
+                "TUUIDFROMBUSSYSYS":"1303139228757008385",
+                "TXFERTIME":"2020-09-08 09:12:57",
+                "TYEAR":"2016",
+                "TDOCTITLE":"中山大学哲学系（珠海）哲学（珠海）专业2016级本科生成绩单[张杭]",
+                "TINVLVTHG1NAME":"张杭",
+                "TINVLVTHG1INTRCODE":"16356040",
+                "TINVLV1SOCCODETYPE":"居民身份证",
+                "TINVLVTHG1SOCCODE":"44058319970801352X",
+                "TDOCDATE":"2020-09-08 09:12:57",
+                "TXFERPERS":"教务系统超级管理员",
+                "TXFERDEPT":"教务处",
+                "TPRVNNCDSC":"本科教务系统，开发者：联奕科技公司",
+                "TAUTHOR":"教务部",
+                "TDEPTORPERSCODE":"72110",
+                "TDEPTNAME":"哲学系（珠海）",
+                "TRECANNTTN":"档号中的年度为该生所在年级，机构为该生所在学院，文件时间为归档包生成的时间"
+            }
+        ],
+        "ENTITY_MANDATEENTITY": [
+            {}
+        ],
+        "ENTITY_RELATIONENTITY": [
+            {}
+        ],
+        "ENTITY_ZMIS0007C03": [
+            {
+                "ZM0007C03Z01":"张杭",
+                "ZM0007C03Z02":"16356040",
+                "ZM0007C03Z03":"哲学系（珠海）",
+                "ZM0007C03Z04":"哲学（珠海）",
+                "ZM0007C03Z05":"2016",
+                "ZM0007C03Z06":"2016-08",
+                "ZM0007C03Z07":"4",
+                "ZM0007C03Z08":"2020-06-30",
+                "ZM0007C03Z09":"\\u56\\u61\\u72\\u69\\u6f\\u75\\u73\\u20\\u22\\u57\\u61\\u79\\u73\\u20\\u6f\\u66\\u20\\u53\\u65\\u65\\u69\\u6e\\u67\\u22\\u3a\\u20\\u41\\u20\\u43\\u72\\u69\\u74\\u69\\u63\\u61\\u6c\\u20\\u45\\u78\\u61\\u6d\\u69\\u6e\\u61\\u74\\u69\\u6f\\u6e\\u20\\u6f\\u66\\u20\\u42\\u65\\u72\\u67\\u65\\u72\\u27\\u73\\u20\\u41\\u65\\u73\\u74\\u68\\u65\\u74\\u69\\u63\\u73\\u20\\u6f\\u66\\u20\\u74\\u68\\u65\\u20\\u46\\u65\\u6d\\u61\\u6c\\u65\\u20\\u4e\\u75\\u64\\u65\\u20\\u61\\u6e\\u64\\u20\\u4d\\u75\\u6c\\u76\\u65\\u79\\u27\\u73\\u20\\u43\\u6f\\u6e\\u63\\u65\\u70\\u74\\u20\\u6f\\u66\\u20\\u74\\u68\\u65\\u20\\u4d\\u61\\u6c\\u65\\u20\\u47\\u61\\u7a\\u65",
+                "ZM0007C03Z10":"142",
+                "ZM0007C03Z11":"72.5",
+                "ZM0007C03Z12":"3.8",
+                "ZM0007C03Z13":"3.7",
+                "ZM0007C03Z14":"否",
+                "ZM0007C03Z15":"",
+                "ZM0007C03Z16":"",
+                "ZM0007C03Z17":"否",
+                "ZM0007C03Z18":"",
+                "ZM0007C03Z19":"",
+                "ZM0007C03Z20":"否",
+                "ZM0007C03Z21":"",
+                "ZM0007C03Z22":""
+            }
+        ]
+    }
+}

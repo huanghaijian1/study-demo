@@ -3,7 +3,15 @@ package enAndDecryption;
 
 import org.jasypt.util.text.BasicTextEncryptor;
 
+import java.math.BigDecimal;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Map;
+import java.util.concurrent.ArrayBlockingQueue;
+import java.util.concurrent.ThreadPoolExecutor;
+import java.util.concurrent.TimeUnit;
+
+import static com.sun.xml.internal.fastinfoset.util.ValueArray.MAXIMUM_CAPACITY;
 
 
 /**
@@ -12,9 +20,32 @@ import java.util.Map;
  * @date 2020/7/28 16:37
  */
 public class TestUtil {
+    static int tableSizeFor(int cap) {
+        int n = cap - 1;
+        n |= n >>> 1;
+        n |= n >>> 2;
+        n |= n >>> 4;
+        n |= n >>> 8;
+        n |= n >>> 16;
+        return (n < 0) ? 1 : (n >= MAXIMUM_CAPACITY) ? MAXIMUM_CAPACITY : n + 1;
+    }
     public static void main(String[] args) {
+
+
+
+//        int a = 20;
+//        int b = 3;
+//        System.out.println(Double.valueOf(a)/Double.valueOf(b));
+//        BigDecimal memberCoeBig = BigDecimal.valueOf(Double.valueOf(a)/Double.valueOf(b)).setScale(0, BigDecimal.ROUND_HALF_UP);;//实际上课人数/标准组人数(标准组人数大于上限人数则为上限人数)
+//        memberCoeBig =  memberCoeBig.compareTo(BigDecimal.valueOf(1.0))==-1 ? BigDecimal.valueOf(1.0) : memberCoeBig;
+//
+//        System.out.println(memberCoeBig.doubleValue());
+//
+//        BigDecimal memberCoeBig2 = BigDecimal.valueOf(Double.valueOf(a)/Double.valueOf(b)).setScale(1, BigDecimal.ROUND_HALF_UP);;//实际上课人数/标准组人数(标准组人数大于上限人数则为上限人数)
+//        memberCoeBig2 =  memberCoeBig2.compareTo(BigDecimal.valueOf(1.0))==-1 ? BigDecimal.valueOf(1.0) : memberCoeBig2;
+//        System.out.println(memberCoeBig2.doubleValue());
 //        //配置文件中密码加密方法
-//        propertiesjm();
+ //      propertiesjm();
 //
 //        //私钥解密
 //        String uuid =  RSAUtils.decryptDataOnJava("SU16crv0FtPlRHWDxGVk00dkImUk3ddDO2Gz8FEGWolHM1uWeKYO2U0nOxONua4nnN4BYBgr5fktj77p6RNOSHaf7AkpJYkCct63/O0UWojxYBo9UsehuP9QcB22QMpBHG/isbPnI3X3Z5S+5nN1Fh4CxRqsjWKXS4J3xifymss=",
@@ -56,18 +87,19 @@ public class TestUtil {
         // 加密密钥 (长点复杂点的字符串就可以,约定好就行)
         textEncryptor.setPassword("9e5eb701949a152dabb25cf9a21b768f2439fa9dd76437d4209bbee8088a1be5");
         //textEncryptor.setPassword(UUID.randomUUID().toString());
-        // 要加密的数据（如数据库的用户名或密码）
-        String password = textEncryptor.encrypt("j1ifAsYZ");
+        // 要加密的数据（如数据库的用户名或密码）pZns1TmI8oPFU43vUpMN4dvYmVZh/sO4
+        String password = textEncryptor.encrypt("kHHgnaQFYmap");
         //加密结果
         System.out.println("password:" + password);
+
 
         //解密结果
         String p = textEncryptor.decrypt(password);
         System.out.println("p:" + p);
         /*配置文件中密码加密方法 end*/
 
-        System.out.println("mq测试环境密码："+textEncryptor.decrypt("u6AFKIiSiUTcEczimCBbdg=="));
-        System.out.println("mq生产环境密码："+textEncryptor.decrypt("YEtRYcqUE8A+Ptm2dL6RaA=="));
+//        System.out.println("mq测试环境密码："+textEncryptor.decrypt("u6AFKIiSiUTcEczimCBbdg=="));
+//        System.out.println("mq生产环境密码："+textEncryptor.decrypt("YEtRYcqUE8A+Ptm2dL6RaA=="));
     }
 
 }
