@@ -31,7 +31,7 @@ public class TestUtil {
     }
     public static void main(String[] args) {
 
-
+        System.out.println("测试合并部分代码到生产分支");
 
 //        int a = 20;
 //        int b = 3;
