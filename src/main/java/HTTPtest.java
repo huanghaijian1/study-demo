@@ -17,6 +17,7 @@ import java.util.Date;
 public class HTTPtest {
 
     public static void main(String[] args) {
+        System.out.println("测试合并部分代码到生产分支2");
 
         System.out.println("abcd.json".substring("abcd.json".lastIndexOf(".")));
 
