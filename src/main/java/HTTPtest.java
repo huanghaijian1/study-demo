@@ -6,6 +6,7 @@ import java.security.PrivateKey;
 import java.security.Signature;
 import java.security.spec.PKCS8EncodedKeySpec;
 import java.text.DateFormat;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -15,10 +16,22 @@ import java.util.Date;
  * @date 2020/7/29 10:21
  */
 public class HTTPtest {
+    public static String strToDateFormat(String date){
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy/MM/dd");
+        formatter.setLenient(false);
+        Date newDate= null;
+        try {
+            newDate = formatter.parse(date);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        formatter = new SimpleDateFormat("yyyy-MM-dd");
+        return formatter.format(newDate);
+    }
 
     public static void main(String[] args) {
 
-        System.out.println("abcd.json".substring("abcd.json".lastIndexOf(".")));
+        System.out.println(strToDateFormat("2018"));
 
 ////        System.out.println("1287938647234904064.zip".substring(0,"1287938647234904064.zip".indexOf(".zip")));
 //        String msgFromSysID = "JWXT";
@@ -38,5 +51,8 @@ public class HTTPtest {
 //        System.out.println(reqSerialNum);
 //        System.out.println(date);
     }
+
+
+
 
 }

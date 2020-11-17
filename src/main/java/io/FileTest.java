@@ -1,5 +1,7 @@
 package io;
 
+import com.aspose.words.Document;
+import com.aspose.words.SaveFormat;
 import net.lingala.zip4j.core.ZipFile;
 import net.lingala.zip4j.exception.ZipException;
 import net.lingala.zip4j.io.ZipOutputStream;
@@ -18,44 +20,65 @@ import java.util.zip.ZipInputStream;
  */
 public class FileTest {
     public static void main(String[] args) {
-        File startFile = new File("D://1291307043519770627.zip");
+//        try{
+//            String tempFilePath = "D://2015.doc";
+//            File tempFile = new File(tempFilePath);
+//            File file = new File("D://2015.pdf");
+//
+//            FileOutputStream os = new FileOutputStream(file);
+//            Document doc = new Document(tempFilePath);//Address是将要被转化的word文档
+//            doc.save(os, SaveFormat.PDF);//全面支持DOC, DOCX, OOXML, RTF HTML, OpenDocument, PDF, EPUB, XPS, SWF 相互转换
+//            byte[] buff = file2byte(file);
+//        }catch (Exception e){
+//            e.printStackTrace();
+//        }
 
-        ZipInputStream zis = null;
-        List<File> fileList = new ArrayList<>();
-        File dir = new File("1291307043519770627");
-        if (!dir.exists()) {// 判断目录是否存在
-            dir.mkdir();
-        }
-        try {
-            zis = new ZipInputStream(new FileInputStream(startFile));
-            ZipEntry ze;
+        OutputStream output = null;
+        BufferedOutputStream bufferedOutput = null;
+
+        try{
+            String tempFilePath = "D://5.doc";
+            File tempFile = new File(tempFilePath);
+            File file = new File("D://5.pdf");
+
+            File tempFile2 = new File("D://6.doc");
+
+            File tempFile6 = new File("D://7.doc");
 
 
-
-            while ((ze = zis.getNextEntry())!=null){
-                String zeName = ze.getName();
-                //File tempFile = new File(zeName);
-                File tempFile = new File(dir,zeName);
-                FileAndIOUtils.inputstreamtofile(zis,tempFile);
-
-            }
-            FileAndIOUtils.compress("JWXT_1291307043519770627.zip","abc123",dir.listFiles());
-
-        } catch (Exception e) {
+            FileOutputStream os = new FileOutputStream(file);
+            Document doc = new Document("D://6.doc");//Address是将要被转化的word文档
+            doc.save(os, SaveFormat.PDF);//全面支持DOC, DOCX, OOXML, RTF HTML, OpenDocument, PDF, EPUB, XPS, SWF 相互转换
+            byte[] buff = file2byte(file);
+        }catch (Exception e){
             e.printStackTrace();
-        }finally {
-            //startFile.delete();
-            //startFile.deleteOnExit();
-            for(File file : dir.listFiles()){
-                file.delete();
-                file.deleteOnExit();
-            }
-            dir.delete();
-//            File file = new File("JWXT_1291307043519770627.zip");
-//            file.delete();
-//            file.deleteOnExit();
         }
 
+    }
+
+    /**
+     * 将文件转换成byte数组
+     * @param tradeFile
+     * @return
+     */
+    private static byte[] file2byte(File tradeFile){
+        byte[] buffer = null;
+        try{
+            FileInputStream fis = new FileInputStream(tradeFile);
+            ByteArrayOutputStream bos = new ByteArrayOutputStream();
+            byte[] b = new byte[1024];
+            int n;
+            while ((n = fis.read(b)) != -1)
+            {
+                bos.write(b, 0, n);
+            }
+            fis.close();
+            bos.close();
+            buffer = bos.toByteArray();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return buffer;
     }
 
     public static byte[] filetoByteArray(InputStream fileInputStream){

@@ -43,7 +43,7 @@ public class TestUtil {
 //        memberCoeBig2 =  memberCoeBig2.compareTo(BigDecimal.valueOf(1.0))==-1 ? BigDecimal.valueOf(1.0) : memberCoeBig2;
 //        System.out.println(memberCoeBig2.doubleValue());
 //        //配置文件中密码加密方法
- //      propertiesjm();
+     propertiesjm();
 //
 //        //私钥解密
 //        String uuid =  RSAUtils.decryptDataOnJava("SU16crv0FtPlRHWDxGVk00dkImUk3ddDO2Gz8FEGWolHM1uWeKYO2U0nOxONua4nnN4BYBgr5fktj77p6RNOSHaf7AkpJYkCct63/O0UWojxYBo9UsehuP9QcB22QMpBHG/isbPnI3X3Z5S+5nN1Fh4CxRqsjWKXS4J3xifymss=",
@@ -86,7 +86,7 @@ public class TestUtil {
         textEncryptor.setPassword("9e5eb701949a152dabb25cf9a21b768f2439fa9dd76437d4209bbee8088a1be5");
         //textEncryptor.setPassword(UUID.randomUUID().toString());
         // 要加密的数据（如数据库的用户名或密码）pZns1TmI8oPFU43vUpMN4dvYmVZh/sO4
-        String password = textEncryptor.encrypt("kHHgnaQFYmap");
+        String password = textEncryptor.encrypt("nYYHpR9f");
         //加密结果
         System.out.println("password:" + password);
 
