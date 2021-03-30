@@ -86,7 +86,7 @@ public class TestUtil {
         textEncryptor.setPassword("9e5eb701949a152dabb25cf9a21b768f2439fa9dd76437d4209bbee8088a1be5");
         //textEncryptor.setPassword(UUID.randomUUID().toString());
         // 要加密的数据（如数据库的用户名或密码）pZns1TmI8oPFU43vUpMN4dvYmVZh/sO4
-        String password = textEncryptor.encrypt("nYYHpR9f");
+        String password = textEncryptor.encrypt("mrDIYScV");
         //加密结果
         System.out.println("password:" + password);
 

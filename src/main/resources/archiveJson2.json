@@ -1,0 +1,96 @@
+{
+    "FolderSettingXML": {
+        "Authorizers": [
+            {
+                "ID": "lly_76120",
+                "Name": "联络员_电子与信息工程学院（微电子学院）",
+                "ObjectType": "角色",
+                "Power": "read"
+            },
+            {
+                "ID": "lly_02030",
+                "Name": "联络员_教务系统超级管理员",
+                "ObjectType": "角色",
+                "Power": "read"
+            }
+        ],
+        "DateTime": "2020-11-24 10:36:14",
+        "FilesList": [
+            {
+                "FileLoc": "1331064052975120385.zip",
+                "Format": "ZIP",
+                "ParentFileUUID": "",
+                "Title": "1331064052975120385",
+                "Type": "单文件",
+                "UUID": "1331064052975120385"
+            }
+        ],
+        "FolderType": "",
+        "PackageUUID": "1331064052975120385"
+    },
+    "Main": [
+        {
+            "Author": "业务系统生成",
+            "FileLoc": "/Files/1331064052975120384.pdf",
+            "Format": "pdf",
+            "ID": "0",
+            "Title": "中山大学电子与信息工程学院（微电子学院）2015级光电信息科学与工程（信息显示与光电技术方向）专业主修培养方案"
+        }
+    ],
+    "Meta": {
+        "ENTITY_AGENTENTITY": [ 
+            {}
+        ],
+        "ENTITY_APPROVEENTITY": [
+
+                {"tstepoprintrcode":"jwcadmin","tstepoprintrcodetype":"审核人教工号","tstepoprop":"测试审核意见有特殊字符双引号测试","trlatdsc":"审核通过","tstepoprname":"教务系统超级管理员","tstepoprtime":"2020-09-18 14:28:03.0"},{"tstepoprintrcode":"jwcadmin","tstepoprintrcodetype":"审核人教工号","trlatdsc":"审核通过","tstepoprname":"教务系统超级管理员","tstepoprtime":"2020-09-18 14:51:41.0"},{"tstepoprintrcode":"jwcadmin","tstepoprintrcodetype":"审核人教工号","trlatdsc":"审核通过","tstepoprname":"教务系统超级管理员","tstepoprtime":"2020-09-18 15:38:06.0"},{"tstepoprintrcode":"jwcadmin","tstepoprintrcodetype":"审核人教工号","trlatdsc":"审核通过","tstepoprname":"教务系统超级管理员","tstepoprtime":"2020-09-18 15:16:32.0"},{"tstepoprintrcode":"jwcadmin","tstepoprintrcodetype":"审核人教工号","trlatdsc":"审核通过","tstepoprname":"教务系统超级管理员","tstepoprtime":"2020-09-18 16:26:33.0"},{"tstepoprafflctn":"教务部","tstepoprintrcode":"006409","tstepoprintrcodetype":"审核人教工号","toprafflctnintrcode":"03100","trlatdsc":"审核通过","tstepoprname":"杨捷","tstepoprtime":"2020-09-23 14:54:17.0"},{"tstepoprafflctn":"教务部","tstepoprintrcode":"006409","tstepoprintrcodetype":"审核人教工号","toprafflctnintrcode":"03100","trlatdsc":"审核通过","tstepoprname":"杨捷","tstepoprtime":"2020-09-23 15:34:15.0"}
+
+        ],
+        "ENTITY_BUSINESSENTITY": [
+            {}
+        ],
+        "ENTITY_FILEENTITY": [
+            {
+                "TUUIDFROMBUSSYSYS":"1331064052975120385",
+                "TXFERTIME":"2020-11-24 10:36:14",
+                "TYEAR":"2015",
+                "TDOCTITLE":"中山大学电子与信息工程学院（微电子学院）2015级光电信息科学与工程（信息显示与光电技术方向）专业主修培养方案",
+                "TINVLVTHG1NAME":"光电信息科学与工程（信息显示与光电技术方向）",
+                "TINVLVTHG1INTRCODE":"15n08070502",
+                "TINVLVTHG1SOCCODE":"n08070502",
+                "TDOCDATE":"2020-11-24",
+                "TXFERPERS":"教务系统超级管理员",
+                "TXFERDEPT":"教务处",
+                "TPRVNNCDSC":"本科教务系统，开发者：联奕科技公司",
+                "TAUTHOR":"教务部",
+                "TDEPTORPERSCODE":"76120",
+                "TDEPTNAME":"电子与信息工程学院（微电子学院）",
+                "TRECANNTTN":"档号中的年度为该专业对应年度，机构为该专业所在院系，文件时间为归档包生成的时间。"
+            }
+        ],
+        "ENTITY_MANDATEENTITY": [
+            {}
+        ],
+        "ENTITY_RELATIONENTITY": [
+            {}
+        ],
+               "ENTITY_ZMIS0007C04": [
+            {
+                "ZM0007C04Z01":"电子与信息工程学院（微电子学院）",
+                "ZM0007C04Z02":"2015",
+                "ZM0007C04Z03":"光电信息科学与工程（信息显示与光电技术方向）",
+                "ZM0007C04Z04":"主修",
+                "ZM0007C04Z05":"4",
+                "ZM0007C04Z06":"工学学士学位",
+                "ZM0007C04Z07":"37.0",
+                "ZM0007C04Z08":"99.0",
+                "ZM0007C04Z09":"16.0",
+                "ZM0007C04Z10":"20.0",
+                "ZM0007C04Z11":"0.0",
+                "ZM0007C04Z12":"172.0",
+                "ZM0007C04Z13":"0.0",
+                "ZM0007C04Z14":"0+0周"
+            }
+        ]
+    }
+}

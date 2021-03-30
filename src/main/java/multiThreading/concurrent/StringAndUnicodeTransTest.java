@@ -11,6 +11,7 @@ import java.io.InputStreamReader;
 import java.io.Reader;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
@@ -33,11 +34,17 @@ public class StringAndUnicodeTransTest {
 //        System.out.println(str.equals(t1));
 
 
-        String path = StringAndUnicodeTransTest.class.getClassLoader().getResource("archiveJson.json").getPath();
+//        String path = StringAndUnicodeTransTest.class.getClassLoader().getResource("archiveJson.json").getPath();
+//        String s = readJsonFile(path);
+//        JSONArray jsonArray = JSON.parseObject(s).getJSONObject("Meta").getJSONArray("ENTITY_ZMIS0007C03");
+//        String lwtm = JSON.parseObject(jsonArray.get(0).toString()).get("ZM0007C03Z09").toString();
+//        System.out.println(unicode2String(lwtm));
+
+        String path = StringAndUnicodeTransTest.class.getClassLoader().getResource("archiveJson2.json").getPath();
         String s = readJsonFile(path);
-        JSONArray jsonArray = JSON.parseObject(s).getJSONObject("Meta").getJSONArray("ENTITY_ZMIS0007C03");
-        String lwtm = JSON.parseObject(jsonArray.get(0).toString()).get("ZM0007C03Z09").toString();
-        System.out.println(unicode2String(lwtm));
+        JSONObject jsonObject1 = JSON.parseObject(s).getJSONObject("Meta");
+        List<Map<String,Object>> entity_approveentity = (List<Map<String,Object>>)jsonObject1.get("ENTITY_APPROVEENTITY");
+        System.out.println(entity_approveentity.get(0).get("ENTITY_APPROVEENTITY_JSON"));
 
 
     }
