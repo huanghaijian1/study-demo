@@ -1,6 +1,7 @@
 package multiThreading.reentrantLock;
 
 import java.util.concurrent.TimeUnit;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
@@ -89,7 +90,7 @@ public class MyTest {
      *
      *     当线程状态为：TERMINATED时，会清除掉thread.interrupt()设置的中断阻塞状态！
      */
-    /**
+    /** 都只是获取或设置线程的中断阻塞状态标志，并不会直接中断线程，用法 if(test){执行任务...}else{//中断线程false true thread1.isInterrupted(); thread1.interrupt();thread1.isInterrupted();}
      * thread1.interrupt()  作用是 设置当前线程（thread1）为中断阻塞状态(使得指定线程中断阻塞状态，并将阻塞标志位置为true。)
      * thread1.isInterrupted()  作用是只测试此线程(thread1)是否为中断阻塞状态 ，不清除中断阻塞状态。
      * thread1.interrupted() 作用是测试当前代码运行所在线程(是main，而不是thread1，除非在thread1.run里调用)是否为中断阻塞状态（检查中断标志），
@@ -101,7 +102,6 @@ public class MyTest {
     public static void test2(){
         final Lock lock = new ReentrantLock();
         final Lock lock2 = new ReentrantLock();
-
         Thread thread1 = new Thread(() -> run2(lock,lock2),"线程一");
 
         Thread thread2 = new Thread(() -> run2(lock2,lock),"线程二");
